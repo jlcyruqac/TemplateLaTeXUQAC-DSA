@@ -1,4 +1,4 @@
-# TemplateLaTeXUQAC
+# TemplateLaTeXUQAC-DSA
 
 [![Last Commit](https://img.shields.io/github/last-commit/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)](https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA/commits/master) [![License](https://img.shields.io/github/license/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)](https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA/blob/master/LICENSE)
 
