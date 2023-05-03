@@ -12,6 +12,7 @@
 %% Modifications
 %%
 % Date - Auteur - Commentaire
+% 2023 Avril - Jean-Luc Cyr - Version Sciences Appliquées
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{uqac}
@@ -21,6 +22,13 @@
 %% Définitions des options
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Directioon
+%\newcommand{\director}[1]{\renewcommand{\director}{#1}}
+\DeclareRobustCommand*\director[1]{\gdef\@director{#1}}
+\DeclareRobustCommand*\soutenancedate[1]{\gdef\@soutenancedate{#1}}
+\DeclareRobustCommand*\jury[1]{\gdef\@jury{#1}}
+\DeclareRobustCommand*\subtitle[1]{\gdef\@subtitle{#1}}
 
 %% Times
 \def\@uqactimes{false}
@@ -113,6 +121,7 @@
 \RequirePackage{amsthm}
 \RequirePackage{amssymb}
 \RequirePackage[explicit]{titlesec}
+\RequirePackage{csquotes}
 
 \ifthenelse{\equal{\@refieee}{true}}{%
   \RequirePackage[numbers]{natbib}
@@ -143,7 +152,7 @@
  \RequirePackage[lined,boxed,linesnumbered,english,onelanguage,resetcount,algochapter]{algorithm2e}
 }
 
-\RequirePackage{minted}
+%\RequirePackage{minted}
 
 \RequirePackage{silence}
 
@@ -339,7 +348,8 @@
 	\addto\captionsfrench{%
 	   \renewcommand\listtablename{Liste des Tableaux}}
 	\addto\captionsfrench{%
-	   \renewcommand\bibname{Bibliographie}}
+	   %\renewcommand\bibname{Bibliographie}}
+     \renewcommand\bibname{Liste de références}}
 	\addto\captionsfrench{%
 	   \renewcommand\indexname{Index}}
 	\addto\captionsfrench{%
@@ -351,7 +361,8 @@
 	\addto\captionsfrench{%
 	   \renewcommand\chaptername{Chapitre}}
 	\addto\captionsfrench{%
-	   \renewcommand\appendixname{Appendice}}
+	   %\renewcommand\appendixname{Appendice}}
+     \renewcommand\appendixname{Annexe}}
 	\addto\captionsfrench{%
 	   \renewcommand\abstractname{R\'esum\'e}}
 }{%
@@ -984,8 +995,8 @@
 
 \ifthenelse{\equal{\@uqacthese}{true}}{%
 	\ifthenelse{\equal{\@uqacfrench}{true}}{%
-  		\gdef\thesetype{\textbf{\MakeUppercase{th\`ese}}}
-   		\gdef\thesegrade{\textbf{\MakeUppercase{philosophi\ae{} doctor (Ph.D.) en \expandafter\expandafter{\@programme}}}}
+  		\gdef\thesetype{\textbf{th\`ese}}
+   		\gdef\thesegrade{\textbf{philosophi\ae{} doctor (Ph.D.) en \expandafter\expandafter{\@programme}}}
    		\gdef\accord{e}
 	}{
 		\gdef\thesetype{\textbf{\MakeUppercase{thesis}}}
@@ -1064,29 +1075,41 @@
 
 \vfill
 
-{\textbf{\MakeUppercase{\@title}}}\\
+{\textbf{\@title}}\\
+{\textbf{\@subtitle}}
 \vfill
 
-\textbf{\MakeUppercase{par \expandafter{\@author}}}
+\textbf{Par\\\expandafter{\@author}}
+
+\textbf{Sous la direction de \expandafter{\@director}}
 \vfill
 
 \thesetype{}
 \ifthenelse{\equal{\@uqacfrench}{true}}{%
-	\textbf{\MakeUppercase{pr\'esent\'e\accord{} à l'université du québec à chicoutimi comme exigence partielle en vue de l'obtention du grade de}}
+	\textbf{pr\'esent\'e\accord{} à l'université du québec à chicoutimi en vue de l'obtention du grade de}
 }{
 	\textbf{\MakeUppercase{presented to l'université du québec à chicoutimi in partial fulfillment of the requierments for the degree of}}
 }
 \thesegrade{}
 \ifx\@concentration\empty
 \else
-\textbf{\MakeUppercase{\@concentration}}
+\textbf{\@concentration}
 \fi
 \vfill
 
-\textbf{\MakeUppercase{qu\'ebec, canada}}
+\textbf{soutenue le \expandafter{\@soutenancedate}}
 \vfill
 
-\textbf{\MakeUppercase{\textsuperscript{\textcopyright} \@author, \@degreeyear}}
+\end{center}
+\noindent
+Jury:\\\expandafter{\@jury}
+\vfill
+
+\begin{center}
+
+Qu\'ebec, Canada
+
+\textcopyright \@author, \@degreeyear
 \vfill
 
 \thispagestyle{empty}
