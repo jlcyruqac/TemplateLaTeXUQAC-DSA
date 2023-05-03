@@ -2,7 +2,7 @@
 
 [![Last Commit](https://img.shields.io/github/last-commit/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)](https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA/commits/master) [![License](https://img.shields.io/github/license/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)](https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA/blob/master/LICENSE)
 
-[![Release Version](https://img.shields.io/github/release/FlorentinTh/TemplateLaTeXUQAC?style=flat-square)](https://github.com/FlorentinTh/TemplateLaTeXUQAC/releases) ![Release Date](https://img.shields.io/github/release-date/FlorentinTh/TemplateLaTeXUQAC?style=flat-square)
+[![Release Version](https://img.shields.io/github/release/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)](https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA/releases) ![Release Date](https://img.shields.io/github/release-date/jlcyruqac/TemplateLaTeXUQAC-DSA?style=flat-square)
 
 Ce projet est un gabarit LaTeX pour la rédaction de documents pour l'Université du Québec à Chicoutimi (UQAC) département des Sciences Appliquées. Il respecte les directives fournies par le [département des sciences appliquées](https://www.uqac.ca/dsa/documents.html). De plus, il est également possible de l'utiliser pour la rédaction de documents dans les deux langues principales, c'est-à-dire le français et l'anglais.
 
