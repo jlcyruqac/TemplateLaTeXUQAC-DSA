@@ -27,7 +27,7 @@ _**Contact :** [jean-luc_cyr@uqac.ca](mailto:jean-Luc_cyr@uqac.ca)_
 - Cloner le dépôt :
 
 ```sh
-$ git clone https://github.com/FlorentinTh/TemplateLaTeXUQAC-DSA.git
+$ git clone https://github.com/jlcyruqac/TemplateLaTeXUQAC-DSA.git
 ```
 
 - Ouvrir le fichier de base src/main.tex avec l'editeur (Texmaker)
